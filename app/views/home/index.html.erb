@@ -1,0 +1,89 @@
+
+
+
+
+  <div class="text-danger text-center mt-5">
+    <h1>WELCOME TO WEBKORPS FOR INTERVIEW DRIVE </h1>
+  </div>
+  <% if notice %>
+  <div class="alert alert-primary text-center" role="alert">
+    <%=notice %>
+  </div>
+  
+    <%end%> 
+  
+
+  
+ 
+  
+  
+  <% if !@user22.blank?%>
+    <div class="col-lg-8 mt-5 text-center">
+      <div class="card mb-4">
+  
+        <div class="card-body">
+          
+  
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><%= @user.name%><br></p>
+              </div>
+            </div>
+  
+              <hr>
+                <div class="row">
+                 <div class="col-sm-3">
+                  <p class="mb-0">Email</p>
+                 </div>
+                 <div class="col-sm-9">
+                  <p class="text-muted mb-0"><%= @user.email%><br></p>
+                   </div>
+                </div>
+               <hr>
+               <div class="row">
+                <div class="col-sm-3">
+                 <p class="mb-0">interviewer name</p>
+                </div>
+                <div class="col-sm-9">
+                 <p class="text-muted mb-0"><% if !@user.inter.blank?%>
+                  <%= @user.inter%>
+                    <%else%>
+                      <%="To be assigned" %>
+                        <%end%></p>
+                  </div>
+               </div>
+               <hr>
+               <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"><%= link_to "Apply",detail_path(@user.id)%></p>
+                 </div>
+                
+               </div>
+               <hr>
+
+                
+               <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"><%= link_to "Track" %></p>
+                 </div>
+                
+               </div>
+               <hr>
+                
+          </div>
+       
+           <% end %>
+  
+                </div>
+      
+        </div>
+      </div>
+    </div>
+  
+
+
+
+

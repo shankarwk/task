@@ -1,0 +1,2 @@
+class Ondrive < ApplicationRecord
+end

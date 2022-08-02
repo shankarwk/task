@@ -1,0 +1,8 @@
+<h1>HR PORTAL</h1>
+<h1>Name of Cadidate</h1>
+<% @can.each do |i|%>
+<%= link_to i.name, show_path(i.id) %> <br>
+
+<% end %>
+
+<%= link_to "Log out", delete_path %>
