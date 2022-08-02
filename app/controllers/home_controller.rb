@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    
+    # jjkjkj
     @user2=""
     if !session[:user_id].blank?
       @user = Candiate.find(session[:user_id])
