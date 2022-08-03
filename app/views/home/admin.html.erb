@@ -1,3 +1,11 @@
+<%ar=[]%>
+
 <% @drive.each do |i| %>
-  <%= i.date%>
+  <% unless ar.include?(i.date) %>
+    <%ar.push(i.date)%>
+  <%end%>
+<%end%>
+
+<% ar.each do |i|%>
+ <%=i%>
 <%end%>
