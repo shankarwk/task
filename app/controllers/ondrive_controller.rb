@@ -7,13 +7,12 @@ class OndriveController < ApplicationController
 
   def all_detail
     @data1 = Candiate.find(params[:id])
-    
-    
+  
   end
    
   def track
-    @data2 = Candiate.find(params[:id]) 
   end
+
 
 
   def info

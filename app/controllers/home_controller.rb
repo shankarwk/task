@@ -29,7 +29,6 @@ class HomeController < ApplicationController
 
   def delete_user
     session.delete(:user_id)
-    session.delete(:hr_id)
     redirect_to root_path
   end  
   def signup
@@ -70,7 +69,12 @@ class HomeController < ApplicationController
   def admin
     @drive = Demo.all
   end  
-
+   
+  def candidate_info
+    @date = Demo.where(date:params[:date])
+   
+    
+  end  
   private
   def user_params(*args)
     params.require(:candiate).permit(:name,:email,:password,:inter,:first,:second,:third,:role)

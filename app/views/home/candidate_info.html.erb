@@ -1,0 +1,5 @@
+
+<% @date.each do |i| %>
+<% @a = Candiate.find_by(id:i.candiate_id)%>
+<%= @a.name%>
+<%end%>
