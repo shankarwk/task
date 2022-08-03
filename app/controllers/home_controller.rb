@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    # jjkjkj
+
     @user2=""
     if !session[:user_id].blank?
       @user = Candiate.find(session[:user_id])
@@ -64,6 +64,11 @@ class HomeController < ApplicationController
       render("signup")
     end
   end
+
+
+  def admin
+    @drive = Demo.all
+  end  
 
   private
   def user_params(*args)
