@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "candidate_details/:id", to: "home#show" , as: :show
   post "updatedata/new/:id/", to: "home#updatedata" , as: :update
   get 'ondrive/detail/:id' , to: "ondrive#detail" , as: :detail
-  get "ondrive/track", to: "ondrive#track", as: :track
+  get "ondrive/track/:id", to: "ondrive#track", as: :track
   get "ondrive/all_detail/:id", to: "ondrive#all_detail" , as: :all
   post "ondrive/info/:id", to: "ondrive#info" , as: :info
   get "home/admin", to: "home#admin" , as: :admin

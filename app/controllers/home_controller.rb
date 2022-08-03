@@ -6,10 +6,7 @@ class HomeController < ApplicationController
       @user = Candiate.find(session[:user_id])
       @user22=@user.id   
     end
-    if !session[:hr_id].blank?
-      @user = Hr.find(session[:hr_id])
-      @user2=@user.id
-    end
+
     
   end
 

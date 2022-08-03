@@ -11,6 +11,7 @@ class OndriveController < ApplicationController
   end
    
   def track
+    @track = Candiate.find(params[:id])
   end
 
 

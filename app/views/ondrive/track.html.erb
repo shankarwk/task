@@ -1,2 +1,107 @@
+<div class="text-center">
+ <!--  -->
+                   
 
-<%= @date %> 
+
+<% if !@track.blank?%>
+<div class="col-lg-8 mt-5 text-center">
+  <div class="card mb-4">
+
+    <div class="card-body">
+      
+
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Name</p>
+          </div>
+          <div class="col-sm-9">
+            <p class="text-muted mb-0"><%= @track.name%><br></p>
+          </div>
+        </div>
+
+          <hr>
+            <div class="row">
+             <div class="col-sm-3">
+              <p class="mb-0">Email</p>
+             </div>
+             <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @track.email%><br></p>
+               </div>
+            </div>
+           <hr>
+           <div class="row">
+            <div class="col-sm-3">
+             <p class="mb-0">interviewer name</p>
+            </div>
+            <div class="col-sm-9">
+             <p class="text-muted mb-0"><% if !@track.inter.blank?%>
+              <%= @user.inter%>
+                <%else%>
+                  <%="To be assigned" %>
+                    <%end%></p>
+              </div>
+           </div>
+           
+           <hr>
+           <div class="row">
+            <div class="col-sm-3">
+             <p class="mb-0">First Round</p>
+            </div>
+            <div class="col-sm-9">
+             <p class="text-muted mb-0"><% if !@track.inter.blank?%>
+              <%= @user.first%>
+                <%else%>
+                  <%="Not cleared" %>
+                    <%end%></p>
+              </div>
+           </div>
+           <hr>
+
+           <div class="row">
+            <div class="col-sm-3">
+             <p class="mb-0">Second round</p>
+            </div>
+            <div class="col-sm-9">
+             <p class="text-muted mb-0"><% if !@track.inter.blank?%>
+              <%= @user.inter%>
+                <%else%>
+                  <%="Not cleared" %>
+                    <%end%></p>
+              </div>
+           </div>
+           <hr>
+           <div class="row">
+            <% if !@track.inter.blank?%>    
+            <div class="col-sm-3">
+             <p class="mb-0">Third round</p>
+            </div>
+            <div class="col-sm-9">
+             <p class="text-muted mb-0">
+              <%= @user.inter%>
+                <%else%>
+                  <%="Not cleared" %>
+                    <%end%></p>
+              </div>
+           </div>
+           
+      
+            
+       
+            
+      </div>
+   
+       <% end %>
+
+            </div>
+  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+    <!--  -->
+</div>
