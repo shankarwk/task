@@ -18,8 +18,15 @@ class OndriveController < ApplicationController
 
   def info
     @d = Candiate.find(session[:user_id])
-    @d.demos.create(date:params[:date])
-    redirect_to root_path
+    @detail = Candiate.find_by(name:params[:name],email:params[:email],password:params[:password])
+    if @detail && params[:name] ==@d.name
+      flash[:notice] = "Applied"
+      @d.demos.create(date:params[:date])
+      redirect_to root_path
+    else
+      flash[:notice] = "Invalid Details Please fill correct detail"
+      redirect_to all_path(session[:user_id])
+    end    
   end
 
 
