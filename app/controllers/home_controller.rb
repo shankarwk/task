@@ -39,7 +39,7 @@ class HomeController < ApplicationController
   def log
   
   end
-  
+   
   def login
     @user = Candiate.find_by(email: params[:email],password:params[:password])
     if @user
